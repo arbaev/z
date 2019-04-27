@@ -16,24 +16,22 @@
   
     
     <!-- Begin Jekyll SEO tag v2.6.0 -->
-<title>Rails: Настройка хранилища Amazon S3 и включение direct upload | Everything unstage</title>
+<title>Rails: Настройка хранилища Amazon S3 и включение direct upload | Everything is anything</title>
 <meta name="generator" content="Jekyll v3.8.5" />
 <meta property="og:title" content="Rails: Настройка хранилища Amazon S3 и включение direct upload" />
-<meta name="author" content="Michael Rose" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Инструкция по настройке Amazon S3 и включения прямой загрузки в рельсовом приложении" />
 <meta property="og:description" content="Инструкция по настройке Amazon S3 и включения прямой загрузки в рельсовом приложении" />
 <link rel="canonical" href="https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html" />
 <meta property="og:url" content="https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html" />
-<meta property="og:site_name" content="Everything unstage" />
+<meta property="og:site_name" content="Everything is anything" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-04-17T00:00:00+03:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Rails: Настройка хранилища Amazon S3 и включение direct upload" />
 <meta name="twitter:site" content="@mmistakes" />
-<meta name="twitter:creator" content="@mmistakes" />
 <script type="application/ld+json">
-{"description":"Инструкция по настройке Amazon S3 и включения прямой загрузки в рельсовом приложении","mainEntityOfPage":{"@type":"WebPage","@id":"https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html"},"@type":"BlogPosting","url":"https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html","headline":"Rails: Настройка хранилища Amazon S3 и включение direct upload","dateModified":"2019-04-17T20:27:01+03:00","datePublished":"2019-04-17T00:00:00+03:00","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://arbaev.github.io/z/images/so-simple-site-logo.png"},"name":"Michael Rose"},"author":{"@type":"Person","name":"Michael Rose"},"@context":"https://schema.org"}</script>
+{"description":"Инструкция по настройке Amazon S3 и включения прямой загрузки в рельсовом приложении","mainEntityOfPage":{"@type":"WebPage","@id":"https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html"},"@type":"BlogPosting","url":"https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html","headline":"Rails: Настройка хранилища Amazon S3 и включение direct upload","dateModified":"2019-04-17T20:27:01+03:00","datePublished":"2019-04-17T00:00:00+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -49,7 +47,7 @@
   <link rel="stylesheet" href="/z/assets/css/main.css">
   
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
-  <link rel="alternate" type="application/atom+xml" title="Everything unstage" href="/z/atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Everything is anything" href="/z/atom.xml">
 <!-- start custom head snippets -->
 
 <!-- insert favicons. use http://realfavicongenerator.net/ -->
@@ -81,16 +79,12 @@
     <header class="masthead">
   <div class="wrap">
     
-      <a href="/z/" class="site-logo" rel="home" title="Everything unstage">
-        <img src="/z/images/so-simple-site-logo.png" class="site-logo-img animated fadeInDown" alt="Everything unstage">
-      </a>
-    
     
     
       
-        <div class="site-title animated fadeIn"><a href="/z/">Everything unstage</a></div>
+        <div class="site-title animated fadeIn"><a href="/z/">Everything is anything</a></div>
       
-      <p class="site-description animated fadeIn" itemprop="description">Мои друзья буквы</p>
+      <p class="site-description animated fadeIn" itemprop="description">Что угодно я знаю</p>
     
   </div>
 </header><!-- /.masthead -->
@@ -110,15 +104,7 @@
       </header>
 
       <div class="page-sidebar">
-        <div class="page-author h-card p-author"><img src="/z/images/michael-rose-photo.jpg" class="author-avatar u-photo" alt="Michael Rose"><div class="author-info"><div class="author-name">
-        <em>by</em> <span class="p-name">Michael Rose</span>
-      </div><ul class="author-links"><li class="author-link">
-            <a class="u-url" rel="me" href="https://twitter.com/mmistakes"><i class="fab fa-twitter-square fa-lg" title="Twitter"></i></a>
-          </li><li class="author-link">
-            <a class="u-url" rel="me" href="https://instagram.com/mmistakes"><i class="fab fa-instagram fa-lg" title="Instagram"></i></a>
-          </li><li class="author-link">
-            <a class="u-url" rel="me" href="https://github.com/mmistakes"><i class="fab fa-github-square fa-lg" title="GitHub"></i></a>
-          </li></ul>
+        <div class="page-author h-card p-author"><div class="author-info">
 
 <span class="read-time">1 min read</span>
 
@@ -140,15 +126,12 @@
 
       <div class="page-content">
         <div class="e-content">
-          <ol>
+          <p>Первые три шага делаем согласно этому мануалу: <a href="https://medium.com/alturasoluciones/setting-up-rails-5-active-storage-with-amazon-s3-3d158cf021ff">Setting up Rails 5 Active Storage with Amazon S3</a></p>
+
+<ol>
   <li>Зарегистрироваться на Amazon AWS</li>
   <li>Создать Bucket (сервис S3)</li>
   <li>Настроить пользователя для доступа к файлам (сервис IAM)</li>
-</ol>
-
-<p>Первые три шага делаем согласно этому мануалу: <a href="https://medium.com/alturasoluciones/setting-up-rails-5-active-storage-with-amazon-s3-3d158cf021ff">Setting up Rails 5 Active Storage with Amazon S3</a></p>
-
-<ol>
   <li>
     <p>В <code class="highlighter-rouge">config/storage.yml</code> раскомментировать блок <code class="highlighter-rouge">amazon:</code>, указать имя бакета и псевдоним сервера. <em>Обратить внимание на пробелы после раскомментирования строк. В каждой строке будет лишний пробел, который приводит к ошибке. Его надо удалить.</em></p>
   </li>
@@ -161,37 +144,39 @@
 <span class="n">gem</span> <span class="s1">'aws-sdk-s3'</span><span class="p">,</span> <span class="s1">'~&gt; 1'</span>
 </code></pre></div>    </div>
   </li>
-  <li>В файлах <code class="highlighter-rouge">config/environments</code> поменять настройку с :local на :amazon
+  <li>В файлах <code class="highlighter-rouge">config/environments</code> поменять настройку с <code class="highlighter-rouge">:local</code> на <code class="highlighter-rouge">:amazon</code>
     <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">#config.active_storage.service = :local</span>
 <span class="n">config</span><span class="p">.</span><span class="nf">active_storage</span><span class="p">.</span><span class="nf">service</span> <span class="o">=</span> <span class="ss">:amazon</span>
 </code></pre></div>    </div>
   </li>
-  <li>Настроить права CORS
- 1) Открываем вкладку с бакетами, выбираем нужный
- 2) Выбрать раздел Permissions, перейти на вкладку CORS configuration
- 3) Вписать туда следующие строки:
-    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
- <span class="nt">&lt;CORSConfiguration</span> <span class="na">xmlns=</span><span class="s">"http://s3.amazonaws.com/doc/2006-03-01/"</span><span class="nt">&gt;</span>
- <span class="nt">&lt;CORSRule&gt;</span>
-     <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
-     <span class="nt">&lt;AllowedMethod&gt;</span>GET<span class="nt">&lt;/AllowedMethod&gt;</span>
-     <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
-     <span class="nt">&lt;AllowedHeader&gt;</span>Authorization<span class="nt">&lt;/AllowedHeader&gt;</span>
- <span class="nt">&lt;/CORSRule&gt;</span>
- <span class="nt">&lt;CORSRule&gt;</span>
-     <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
-     <span class="nt">&lt;AllowedMethod&gt;</span>PUT<span class="nt">&lt;/AllowedMethod&gt;</span>
-     <span class="nt">&lt;AllowedMethod&gt;</span>POST<span class="nt">&lt;/AllowedMethod&gt;</span>
-     <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
-     <span class="nt">&lt;AllowedHeader&gt;</span>*<span class="nt">&lt;/AllowedHeader&gt;</span>
- <span class="nt">&lt;/CORSRule&gt;</span>
- <span class="nt">&lt;/CORSConfiguration&gt;</span>
-</code></pre></div>    </div>
-    <p>4) Когда разработка будет закончена, стоит поменять права на допуск только с нашего сайта, то есть заменить строки AllowedOrigin:</p>
-    <pre><code class="language-XML"> &lt;AllowedOrigin&gt;https://*.mysite.com&lt;/AllowedOrigin&gt;
-</code></pre>
-  </li>
+  <li>Настроить права CORS</li>
 </ol>
+
+<p>1) Открываем вкладку с бакетами, выбираем нужный
+  2) Выбрать раздел Permissions, перейти на вкладку CORS configuration
+  3) Вписать туда следующие строки:
+    <code class="highlighter-rouge">xml
+    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
+    &lt;CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"&gt;
+    &lt;CORSRule&gt;
+        &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;
+        &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;
+        &lt;MaxAgeSeconds&gt;3000&lt;/MaxAgeSeconds&gt;
+        &lt;AllowedHeader&gt;Authorization&lt;/AllowedHeader&gt;
+    &lt;/CORSRule&gt;
+    &lt;CORSRule&gt;
+        &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;
+        &lt;AllowedMethod&gt;PUT&lt;/AllowedMethod&gt;
+        &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;
+        &lt;MaxAgeSeconds&gt;3000&lt;/MaxAgeSeconds&gt;
+        &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;
+    &lt;/CORSRule&gt;
+    &lt;/CORSConfiguration&gt;
+   </code>
+  4) Когда разработка будет закончена, стоит поменять права на допуск только с нашего сайта, то есть заменить строки AllowedOrigin:
+    <code class="highlighter-rouge">XML
+    &lt;AllowedOrigin&gt;https://*.mysite.com&lt;/AllowedOrigin&gt;
+   </code></p>
 
 <p>На этом настройка S3 закончена, файлы должны успешно загружаться.</p>
 
@@ -199,17 +184,13 @@
 
 <h3 id="настройка-direct-uploads">Настройка direct uploads</h3>
 
-<p>Действуем по мануалу http://rusrails.ru/active_storage_overview#pryamye-zagruzki
-А именно:</p>
+<p>Действуем по мануалу <a href="http://rusrails.ru/active_storage_overview#pryamye-zagruzki">9. Прямые загрузки</a></p>
 
-<ol>
-  <li>
-    <p>К полям загрузки в форме добавить аттрибут <code class="highlighter-rouge">direct_upload: true</code></p>
-  </li>
-  <li>
-    <p>Создать файлы <code class="highlighter-rouge">direct_upload.js</code> и <code class="highlighter-rouge">direct_upload.scss</code> с содержимым из мануала выше. Убедиться, что файлы подключились.</p>
-  </li>
-</ol>
+<p>А именно:</p>
+
+<p>9. К полям загрузки в форме добавить аттрибут <code class="highlighter-rouge">direct_upload: true</code></p>
+
+<p>10. Создать файлы <code class="highlighter-rouge">direct_upload.js</code> и <code class="highlighter-rouge">direct_upload.scss</code> с содержимым из мануала выше. Убедиться, что файлы подключились.</p>
 
 <p>Прямая загрузка на S3 должна работать.</p>
 
@@ -231,10 +212,10 @@
   
 
   
-    <a class="page-next" href="/z/2019/04/23/sort_by.html">
+    <a class="page-next" href="/z/2019/04/22/coding-without-ifs.html">
       <h4 class="page-pagination-label">Next</h4>
       <span class="page-pagination-title">
-        Ruby: методы sort и sort_by
+        Кодинг без ифов
  <i class="fas fa-arrow-right"></i>
       </span>
     </a>
@@ -251,9 +232,9 @@
   <!-- start custom footer snippets -->
 
 <!-- end custom footer snippets -->
-<div class="social-icons"><a class="social-icon" href="https://twitter.com/mmistakes"><i class="fab fa-twitter-square fa-2x" title="Twitter"></i></a><a class="social-icon" href="https://instagram.com/mmistakes"><i class="fab fa-instagram fa-2x" title="Instagram"></i></a><a class="social-icon" href="https://github.com/mmistakes"><i class="fab fa-github-square fa-2x" title="GitHub"></i></a><a class="social-icon" href="/z/atom.xml"><i class="fas fa-rss-square fa-2x" title="Feed"></i></a></div><div class="copyright">
+<div class="copyright">
     
-      <p>&copy; 2019 Everything unstage. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+      <p>&copy; 2019 Everything is anything. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
     
   </div>
 </footer>

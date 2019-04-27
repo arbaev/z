@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.1.2
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.0 -->
+<title>Кодинг без ифов | Everything is anything</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Кодинг без ифов" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Простые способы избавления от логики в Руби" />
+<meta property="og:description" content="Простые способы избавления от логики в Руби" />
+<link rel="canonical" href="https://arbaev.github.io/z/2019/04/22/coding-without-ifs.html" />
+<meta property="og:url" content="https://arbaev.github.io/z/2019/04/22/coding-without-ifs.html" />
+<meta property="og:site_name" content="Everything is anything" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-04-22T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Кодинг без ифов" />
+<meta name="twitter:site" content="@mmistakes" />
+<script type="application/ld+json">
+{"description":"Простые способы избавления от логики в Руби","mainEntityOfPage":{"@type":"WebPage","@id":"https://arbaev.github.io/z/2019/04/22/coding-without-ifs.html"},"@type":"BlogPosting","url":"https://arbaev.github.io/z/2019/04/22/coding-without-ifs.html","headline":"Кодинг без ифов","dateModified":"2019-04-23T19:22:00+03:00","datePublished":"2019-04-22T00:00:00+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/z/assets/css/main.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,700,700i|Lora:400,400i,700,700i">
+  <link rel="alternate" type="application/atom+xml" title="Everything is anything" href="/z/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  кодинг-без-ифов">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/z/">Home</a></li><li><a href="/z/posts/">Posts</a></li><li><a href="/z/categories/">Categories</a></li><li><a href="/z/tags/">Tags</a></li><li><a href="/z/about/">About</a></li><li><a href="/z/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/z/">Everything is anything</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">Что угодно я знаю</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Кодинг без ифов
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><div class="author-info">
+
+<span class="read-time">3 min read</span>
+
+    <time class="page-date dt-published" datetime="2019-04-22T00:00:00+03:00"><a class="u-url" href="">April 22, 2019</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/z/tags/#ruby" title="Pages tagged ruby" rel="tag">ruby</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <p><em>Перевод статьи <a href="https://thoughtbot.com/blog/coding-without-ifs">coding without ifs</a></em></p>
+
+<p>То, что усложняет код больше всего на свете, - это условная логика
+Условная логика усложняет код больше всего на свете. Все эти <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">else</code>, <code class="highlighter-rouge">unless</code>, как вложенные, так и не вложенные. Я всегда стараюсь избавиться от них где можно, потому что код без них легче читается и имеет лучший ритм. Сравните это:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_subscriptions</span>
+  <span class="no">Subscription</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="ss">:all</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">each</span><span class="o">|</span>
+    <span class="k">if</span> <span class="n">each</span><span class="p">.</span><span class="nf">expired?</span>
+      <span class="n">each</span><span class="p">.</span><span class="nf">renew!</span>
+    <span class="k">else</span>
+      <span class="n">each</span><span class="p">.</span><span class="nf">update!</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>с этим:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_subscriptions</span>
+  <span class="n">subscriptions</span> <span class="o">=</span> <span class="no">Subscription</span><span class="p">.</span><span class="nf">find</span> <span class="ss">:all</span>
+  <span class="n">expired</span> <span class="o">=</span> <span class="n">subscriptions</span><span class="p">.</span><span class="nf">select</span> <span class="p">{</span> <span class="o">|</span><span class="n">each</span><span class="o">|</span> <span class="n">each</span><span class="p">.</span><span class="nf">expired?</span> <span class="p">}</span>
+  <span class="n">expired</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">each</span><span class="o">|</span> <span class="n">each</span><span class="p">.</span><span class="nf">renew!</span> <span class="p">}</span>
+  <span class="n">active</span> <span class="o">=</span> <span class="n">subscriptions</span><span class="p">.</span><span class="nf">reject</span> <span class="p">{</span> <span class="o">|</span><span class="n">each</span><span class="o">|</span> <span class="n">each</span><span class="p">.</span><span class="nf">expired?</span> <span class="p">}</span>
+  <span class="n">active</span><span class="p">.</span><span class="nf">each</span> <span class="p">{</span> <span class="o">|</span><span class="n">each</span><span class="o">|</span> <span class="n">each</span><span class="p">.</span><span class="nf">update!</span> <span class="p">}</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>В приведенном выше коде об условной логике позаботились исчисляемые методы <code class="highlighter-rouge">#select</code> и <code class="highlighter-rouge">#reject</code>. Получается, мы переместили условную логику внутрь Ruby из нашего кода. Посмотрите, как во втором примере код просто спокойно течет вверх и вниз, без всяких отступов и ответвлений, его очень легко читать. Даже не программисты выбрали бы второй пример как более простой и элегантный. Еще пример. Скажем, фильтры контроллера в Rails работали так:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EventsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+  <span class="k">def</span> <span class="nf">new</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">create</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">index</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">show</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="k">def</span> <span class="nf">filter</span>
+    <span class="k">if</span> <span class="n">action_name</span> <span class="o">==</span> <span class="s1">'new'</span> <span class="o">||</span> <span class="n">action_name</span> <span class="o">==</span> <span class="s1">'create'</span>
+      <span class="n">authenticate</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="c1"># или через поиск в литерале</span>
+  <span class="k">def</span> <span class="nf">filter</span>
+    <span class="k">if</span> <span class="sx">%w(new create)</span><span class="p">.</span><span class="nf">include?</span><span class="p">(</span><span class="n">action_name</span><span class="p">)</span>
+      <span class="n">authenticate</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">authenticate</span>
+    <span class="k">unless</span> <span class="n">session</span><span class="p">[</span><span class="ss">:user_id</span><span class="p">]</span>
+      <span class="n">redirect_to</span> <span class="n">login_url</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>В методе <code class="highlighter-rouge">#filter</code> нужно условие, потому что мы хотим, чтобы юзер был залогинен для экшенов <code class="highlighter-rouge">#new</code> и <code class="highlighter-rouge">#create</code>. Однако, Рельсовые методы фильтра поддерживают только ключ-параметр. Значит можно переписать это дело используя метод класса <code class="highlighter-rouge">#before_action</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EventsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+
+  <span class="n">before_action</span> <span class="ss">:authenticate</span><span class="p">,</span> <span class="ss">:only</span> <span class="o">=&gt;</span> <span class="p">[</span><span class="ss">:new</span><span class="p">,</span> <span class="ss">:create</span><span class="p">]</span>
+
+  <span class="k">def</span> <span class="nf">new</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">create</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">index</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">show</span>
+  <span class="k">end</span>
+
+  <span class="kp">private</span>
+
+  <span class="k">def</span> <span class="nf">authenticate</span>
+    <span class="k">unless</span> <span class="n">session</span><span class="p">[</span><span class="ss">:user_id</span><span class="p">]</span>
+      <span class="n">redirect_to</span> <span class="n">login_url</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>Здорово. В этот раз мы передвинули условную логику в нутро фреймворка. Где-то там в глубинах Рельс <code class="highlighter-rouge">#before_action</code> содержит иф, а в нашем коде его на один меньше. Валидации ActiveRecord::Base этот метод тоже поддерживают. Скажем, при регистрации на нашем сайте указывать возраст не обязательно, но если указали, то он должен быть между 18 и 30.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+
+  <span class="k">def</span> <span class="nf">validate</span>
+    <span class="k">if</span> <span class="o">!</span><span class="n">age</span><span class="p">.</span><span class="nf">blank?</span>
+      <span class="k">if</span> <span class="o">!</span> <span class="p">(</span><span class="mi">18</span><span class="o">..</span><span class="mi">30</span><span class="p">).</span><span class="nf">include?</span><span class="p">(</span><span class="n">age</span><span class="p">)</span>
+        <span class="n">errors</span><span class="p">.</span><span class="nf">add</span> <span class="ss">:age</span><span class="p">,</span> <span class="s1">'must be between 18 and 30'</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+<p>Чёрт ногу сломит, всё в ифах. К счастью, нам помогу методы валидации класса ActiveRecord::Base:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+
+  <span class="n">validates_inclusion_of</span> <span class="ss">:age</span><span class="p">,</span>
+    <span class="ss">:allow_nil</span> <span class="o">=&gt;</span> <span class="kp">true</span><span class="p">,</span>
+    <span class="ss">:in</span> <span class="o">=&gt;</span> <span class="mi">18</span><span class="o">..</span><span class="mi">30</span><span class="p">,</span>
+    <span class="ss">:message</span> <span class="o">=&gt;</span> <span class="s1">'must be between 18 and 30'</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+<p>Намного лучше. Сейчас рельсовый хелпер <code class="highlighter-rouge">#validates_inclusion_of</code> содержит два ифа, а наш код — нуль.</p>
+
+<p>Забавно, что колбэки ActiveRecord::Base не поддерживают параметр if.</p>
+
+<p>Ещё пример. Допустим, в нашем приложении есть публикации. Публикации бывают двух типов, скажем ABC и XYZ. Сейчас информация о публикациях ABC и XYZ предоставляется их собственными сайтами, так что нам надо сделать запрос о них черех HTTP. Публикации мы храним у себя, чтобы не запрашивать их с удалённого сервера каждый раз. И в данном случае нам не нужно беспокоится о синхронизации, потому что публикации никогда не меняются.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Publication</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+
+  <span class="k">def</span> <span class="nf">before_create</span>
+    <span class="k">if</span> <span class="n">type</span> <span class="o">==</span> <span class="s1">'ABC'</span>
+      <span class="c1"># название достаточно уникально, чтобы можно было по нему найти публикацию</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">attributes</span> <span class="o">=</span> <span class="no">AbcGateway</span><span class="p">.</span><span class="nf">find</span> <span class="nb">name</span>
+    <span class="k">end</span>
+    <span class="k">if</span> <span class="n">type</span> <span class="o">==</span> <span class="s1">'XYZ'</span>
+      <span class="c1"># название достаточно уникально, чтобы можно было по нему найти публикацию</span>
+      <span class="nb">self</span><span class="p">.</span><span class="nf">attributes</span> <span class="o">=</span> <span class="no">XyzGateway</span><span class="p">.</span><span class="nf">find</span> <span class="nb">name</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+<p>Опять убогие условия. Я хочу отдать разбираться с этим Рельсам используя метод класса <code class="highlighter-rouge">#before_create</code> вместо переопределения инстанс метода.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Publication</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+
+  <span class="n">before_create</span> <span class="ss">:abc</span><span class="p">,</span> <span class="ss">:if</span> <span class="o">=&gt;</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="o">|</span><span class="n">publication</span><span class="o">|</span> <span class="n">publication</span><span class="p">.</span><span class="nf">type</span> <span class="o">==</span> <span class="s1">'ABC'</span> <span class="p">}</span>
+
+  <span class="n">before_create</span> <span class="ss">:xyz</span><span class="p">,</span> <span class="ss">:if</span> <span class="o">=&gt;</span> <span class="no">Proc</span><span class="p">.</span><span class="nf">new</span> <span class="p">{</span> <span class="o">|</span><span class="n">publication</span><span class="o">|</span> <span class="n">publication</span><span class="p">.</span><span class="nf">type</span> <span class="o">==</span> <span class="s1">'XYZ'</span> <span class="p">}</span>
+
+  <span class="k">def</span> <span class="nf">abc</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">attributes</span> <span class="o">=</span> <span class="no">AbcGateway</span><span class="p">.</span><span class="nf">find</span> <span class="nb">name</span>
+  <span class="k">end</span>
+
+  <span class="k">def</span> <span class="nf">xyz</span>
+    <span class="nb">self</span><span class="p">.</span><span class="nf">attributes</span> <span class="o">=</span> <span class="no">XyzGateway</span><span class="p">.</span><span class="nf">find</span> <span class="nb">name</span>
+  <span class="k">end</span>
+
+<span class="k">end</span>
+</code></pre></div></div>
+<p>Так-то лучше!</p>
+
+<p>Есть ещё кусочек синтаксического сахара, о котором я не позаботился. Мой первый пример можно переписать более компактно:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_subscriptions</span>
+  <span class="no">Subscription</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="ss">:all</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">each</span><span class="o">|</span>
+    <span class="n">each</span><span class="p">.</span><span class="nf">renew!</span> <span class="k">if</span> <span class="n">each</span><span class="p">.</span><span class="nf">expired?</span>
+    <span class="n">each</span><span class="p">.</span><span class="nf">update!</span> <span class="k">unless</span> <span class="n">each</span><span class="p">.</span><span class="nf">expired?</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>Но так мне не нравится, потому что код выглядит будто в нём нет условной логики, а она есть. Просто операторы if и unless скрылись в конце строк. Если уж логики не избежать, её должно быть хорошо видно. Хорошее напоминание, что в этом месте можно кое-что отрефакторить.</p>
+
+<p>Тоже самое делает старый добрый тернарный оператор:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_subscriptions</span>
+  <span class="no">Subscription</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="ss">:all</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">each</span><span class="o">|</span>
+    <span class="n">each</span><span class="p">.</span><span class="nf">expired?</span> <span class="p">?</span> <span class="n">each</span><span class="p">.</span><span class="nf">renew!</span> <span class="p">:</span> <span class="n">each</span><span class="p">.</span><span class="nf">update!</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+</code></pre></div></div>
+<p>Даже короче получилось. Но опять неочевидная условная логика. К тому же двойной ‘?’ выглядит крайне убого.</p>
+
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Farbaev.github.io%2Fz%2F2019%2F04%2F22%2Fcoding-without-ifs.html" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%D0%9A%D0%BE%D0%B4%D0%B8%D0%BD%D0%B3+%D0%B1%D0%B5%D0%B7+%D0%B8%D1%84%D0%BE%D0%B2%20https%3A%2F%2Farbaev.github.io%2Fz%2F2019%2F04%2F22%2Fcoding-without-ifs.html" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Farbaev.github.io%2Fz%2F2019%2F04%2F22%2Fcoding-without-ifs.html" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%D0%9A%D0%BE%D0%B4%D0%B8%D0%BD%D0%B3+%D0%B1%D0%B5%D0%B7+%D0%B8%D1%84%D0%BE%D0%B2&url=https%3A%2F%2Farbaev.github.io%2Fz%2F2019%2F04%2F22%2Fcoding-without-ifs.html" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/z/2019/04/17/rails5-amazon-s3-direct-uploads.html">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> Rails: Настройка хранилища Amazon S3 и включение direct upload
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/z/2019/04/23/sort_by.html">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        Ruby: методы sort и sort_by
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="copyright">
+    
+      <p>&copy; 2019 Everything is anything. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/z/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  </body>
+
+</html>
