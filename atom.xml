@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://arbaev.github.io/z/atom.xml" rel="self" type="application/atom+xml" /><link href="https://arbaev.github.io/z/" rel="alternate" type="text/html" /><updated>2019-04-27T18:46:38+03:00</updated><id>https://arbaev.github.io/z/</id><title type="html">Everything is anything</title><subtitle>Что угодно я знаю</subtitle><entry><title type="html">Ruby: методы sort и sort_by</title><link href="https://arbaev.github.io/z/2019/04/23/sort_by.html" rel="alternate" type="text/html" title="Ruby: методы sort и sort_by" /><published>2019-04-23T00:00:00+03:00</published><updated>2019-04-23T19:22:00+03:00</updated><id>https://arbaev.github.io/z/2019/04/23/sort_by</id><content type="html" xml:base="https://arbaev.github.io/z/2019/04/23/sort_by.html">&lt;p&gt;В Ruby у класса Enumerable есть методы sort и sort_by. Первый выполняет простую сортировку массива. А вот второй более интересен.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://arbaev.github.io/z/atom.xml" rel="self" type="application/atom+xml" /><link href="https://arbaev.github.io/z/" rel="alternate" type="text/html" /><updated>2019-04-28T00:50:14+03:00</updated><id>https://arbaev.github.io/z/</id><title type="html">Anything is Z</title><subtitle>Что угодно я знаю</subtitle><entry><title type="html">Идеи стартапов с сайта IndieHackers</title><link href="https://arbaev.github.io/z/2019/04/27/indiehackers-ideas.html" rel="alternate" type="text/html" title="Идеи стартапов с сайта IndieHackers" /><published>2019-04-27T00:00:00+03:00</published><updated>2019-04-27T23:23:00+03:00</updated><id>https://arbaev.github.io/z/2019/04/27/indiehackers-ideas</id><content type="html" xml:base="https://arbaev.github.io/z/2019/04/27/indiehackers-ideas.html">&lt;p&gt;редакция от 27.04.2019&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://wpbeaveraddons.com&quot;&gt;PowerPack for Beaver Builder&lt;/a&gt;&lt;/strong&gt;, $20000/mo&lt;br /&gt;
+Комплект плагинов для WordPress. Лицензия на год $69.&lt;br /&gt;
+&lt;a href=&quot;https://www.indiehackers.com/interview/pausing-our-digital-agency-to-build-a-20k-mo-wordpress-plugin-aa6b118f62&quot;&gt;Pausing Our Digital Agency to Build a $20k/mo WordPress Plugin&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.epicpxls.com/&quot;&gt;EpicPxls&lt;/a&gt;&lt;/strong&gt;, $400/mo&lt;br /&gt;
+Микросток темплейтов и разных дизайнерских штучек&lt;br /&gt;
+&lt;a href=&quot;https://www.indiehackers.com/interview/how-i-turned-design-castoffs-into-a-profitable-community-marketplace-741caf8330&quot;&gt;How I Turned Design Castoffs into a Profitable Community Marketplace&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.thekeycuts.com/&quot;&gt;KeyCuts&lt;/a&gt;&lt;/strong&gt;, $250/mo&lt;br /&gt;
+Наклейки на клавиатуру с шорткатами Excel&lt;br /&gt;
+&lt;em&gt;емае, почему только экселя, а не всех популярных программ? Наклейки недешёвые, кстати&lt;/em&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.indiehackers.com/interview/how-i-aligned-my-side-project-with-a-new-full-time-career-d2c4d6f8fa&quot;&gt;How I Aligned My Side Project with a New Full-Time Career&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://1kprojects.com/&quot;&gt;1kprojects&lt;/a&gt;&lt;/strong&gt;, $600/mo&lt;br /&gt;
+Биржа вебсайтов&lt;br /&gt;
+&lt;a href=&quot;https://www.indiehackers.com/interview/how-i-beat-maker-paralysis-with-an-800-mo-side-project-075af15c98&quot;&gt;How I Beat Maker Paralysis with an $800/mo Side Project&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://www.lambdatest.com/&quot;&gt;Lambdatest&lt;/a&gt;&lt;/strong&gt;, $50000/mo&lt;br /&gt;
+Виртуальное тестирование приложений в 2000 версиях браузеров&lt;br /&gt;
+&lt;a href=&quot;https://www.indiehackers.com/interview/how-a-software-testing-problem-led-me-to-26-monthly-growth-bc868672a5&quot;&gt; How a Software Testing Problem Led Me to 26% Monthly Growth &lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://750words.com/&quot;&gt;750words&lt;/a&gt;&lt;/strong&gt;, $20000/mo&lt;br /&gt;
+Сервис приватного фрирайтинга. Пишешь каждый день что угодно для себя, нигде это не публикуется. Фишка в прививании ежедневной практики писания. Выполняешь задачи, зарабатываешь бейджи. Цена 5 баксов в мес. Слабо верится в 20к дохода ежемес&lt;br /&gt;
+&lt;a href=&quot;https://www.indiehackers.com/interview/transforming-my-simple-daily-habit-into-20-000-per-month-063525ef84&quot;&gt; Transforming My Simple Daily Habit into $20,000 per Month &lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://keygen.sh/&quot;&gt;Keygen&lt;/a&gt;&lt;/strong&gt;, $3000/mo&lt;br /&gt;
+АПИ для лицензирования и дистрибуции софта.&lt;br /&gt;
+&lt;a href=&quot;https://www.indiehackers.com/interview/how-i-found-my-market-and-a-10-monthly-growth-rate-2fa6c5e1eb&quot;&gt; How I Found My Market (and a 10% Monthly Growth Rate) &lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;Шаблончик&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/strong&gt;, $/mo&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;a href=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="идеи" /><category term="ideas" /><category term="стартап" /><category term="startup" /><summary type="html">В чём заключается замысел каждого стартапа, проинтервьюированного сайтом IndieHackers</summary></entry><entry><title type="html">Ruby: методы sort и sort_by</title><link href="https://arbaev.github.io/z/2019/04/23/sort_by.html" rel="alternate" type="text/html" title="Ruby: методы sort и sort_by" /><published>2019-04-23T00:00:00+03:00</published><updated>2019-04-23T19:22:00+03:00</updated><id>https://arbaev.github.io/z/2019/04/23/sort_by</id><content type="html" xml:base="https://arbaev.github.io/z/2019/04/23/sort_by.html">&lt;p&gt;В Ruby у класса Enumerable есть методы sort и sort_by. Первый выполняет простую сортировку массива. А вот второй более интересен.
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Sort_by&lt;/code&gt; передаёт в блок элементы один за другим, как это делает &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, например. Но как, имея один объект из множества, отсортировать всё множество? Загадочный метод. В нём используется &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%A8%D0%B2%D0%B0%D1%80%D1%86%D0%B0&quot;&gt;преобразование Шварца&lt;/a&gt;. Хитрость в том, что данные сначала проходят через наш блок и результаты вычислений заносится во временный массив попарно. Затем временный массив сортируется и получаем из него исходные данные в нужном порядке.
 Например, имеем массив строк:&lt;/p&gt;
 
@@ -226,7 +273,7 @@
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Настроить права CORS
+    &lt;p&gt;Настроить права CORS&lt;br /&gt;
   1) Открываем вкладку с бакетами, выбираем нужный&lt;br /&gt;
   2) Выбрать раздел Permissions, перейти на вкладку CORS configuration&lt;br /&gt;
   3) Вписать туда следующие строки:&lt;/p&gt;
@@ -248,15 +295,12 @@
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/CORSRule&amp;gt;&lt;/span&gt;
  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/CORSConfiguration&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+    &lt;p&gt;4) Когда разработка будет закончена, стоит поменять права на допуск только с нашего сайта, то есть заменить строки AllowedOrigin:&lt;/p&gt;
+
+    &lt;div class=&quot;language-xml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; &lt;span class=&quot;nt&quot;&gt;&amp;lt;AllowedOrigin&amp;gt;&lt;/span&gt;https://*.mysite.com&lt;span class=&quot;nt&quot;&gt;&amp;lt;/AllowedOrigin&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
-
-&lt;p&gt;4) Когда разработка будет закончена, стоит поменять права на допуск только с нашего сайта, то есть заменить строки AllowedOrigin:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;```xml
-&amp;lt;AllowedOrigin&amp;gt;https://*.mysite.com&amp;lt;/AllowedOrigin&amp;gt;
-```
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;На этом настройка S3 закончена, файлы должны успешно загружаться.&lt;/p&gt;
 
@@ -271,7 +315,7 @@
 
 &lt;p&gt;10. Создать файлы &lt;code class=&quot;highlighter-rouge&quot;&gt;direct_upload.js&lt;/code&gt; и &lt;code class=&quot;highlighter-rouge&quot;&gt;direct_upload.scss&lt;/code&gt; с содержимым из мануала выше. Убедиться, что файлы подключились.&lt;/p&gt;
 
-&lt;p&gt;Прямая загрузка на S3 должна работать.&lt;/p&gt;</content><author><name></name></author><category term="aws" /><category term="rails" /><summary type="html">Инструкция по настройке Amazon S3 и включения прямой загрузки в рельсовом приложении</summary></entry><entry><title type="html">Список книг для почитать</title><link href="https://arbaev.github.io/z/2019/01/01/books-to-read.html" rel="alternate" type="text/html" title="Список книг для почитать" /><published>2019-01-01T00:00:00+03:00</published><updated>2019-04-27T21:03:00+03:00</updated><id>https://arbaev.github.io/z/2019/01/01/books-to-read</id><content type="html" xml:base="https://arbaev.github.io/z/2019/01/01/books-to-read.html">&lt;p&gt;&lt;em&gt;добавлено 15.04.2019&lt;/em&gt;
+&lt;p&gt;Прямая загрузка на S3 должна работать.&lt;/p&gt;</content><author><name></name></author><category term="aws" /><category term="rails" /><summary type="html">Инструкция по настройке Amazon S3 и включения прямой загрузки в рельсовом приложении</summary></entry><entry><title type="html">Список книг для почитать</title><link href="https://arbaev.github.io/z/2019/01/01/books-to-read.html" rel="alternate" type="text/html" title="Список книг для почитать" /><published>2019-01-01T00:00:00+03:00</published><updated>2019-04-27T21:03:00+03:00</updated><id>https://arbaev.github.io/z/2019/01/01/books-to-read</id><content type="html" xml:base="https://arbaev.github.io/z/2019/01/01/books-to-read.html">&lt;p&gt;&lt;em&gt;добавлено 15.04.2019&lt;/em&gt;&lt;br /&gt;
 ##Джо Диспенза “Сила подсознания”&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;мне хотелось меняться, но я не знала как. Пока мне не попала в руки эта книга. Она всегда попадает к своему читателю вовремя.&lt;/p&gt;

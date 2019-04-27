@@ -293,7 +293,7 @@
 /* Document
    ========================================================================== */
 html {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
   /* 1 */
   box-sizing: border-box;
   -ms-text-size-adjust: 100%;
@@ -562,7 +562,7 @@ select,
 textarea {
   margin: 0;
   /* 2 */
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
   /* 1 */
   font-size: 100%;
   /* 1 */
@@ -795,7 +795,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
   text-rendering: optimizeLegibility;
   /* enable common ligatures and kerning */ }
 
@@ -1001,7 +1001,7 @@ th {
 
 .site-description {
   margin-bottom: 1em;
-  font-family: "Lora", serif;
+  font-family: "Merriweather", serif;
   font-weight: 400;
   font-style: italic; }
   .site-description {
@@ -1088,7 +1088,7 @@ th {
 .taxonomy-title {
   margin-bottom: 0.5em;
   color: #999999;
-  font-family: "Source Sans Pro", sans-serif; }
+  font-family: "Noto Sans SC", sans-serif; }
   .taxonomy-title {
     font-size: 28px; }
     @media screen and (min-width: 320px) {
@@ -1107,7 +1107,7 @@ th {
   grid-template-columns: repeat(2, 1fr);
   margin: 0;
   padding: 0;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
   font-size: 0.9em;
   list-style: none; }
   @media (min-width: 64em) {
@@ -1199,7 +1199,7 @@ th {
     padding: 0.75rem 1rem;
     color: #586e75;
     background-color: #fafafa;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: "Noto Sans SC", sans-serif;
     font-size: 0.75rem;
     text-transform: uppercase;
     cursor: pointer; }
@@ -1228,7 +1228,7 @@ th {
       height: auto; }
   .toc-wrapper li {
     padding: 0.3em 0;
-    font-family: "Source Sans Pro", sans-serif; }
+    font-family: "Noto Sans SC", sans-serif; }
     .toc-wrapper li a {
       display: inline-block;
       color: inherit;
@@ -1254,18 +1254,16 @@ th {
 
 .page-title {
   margin-bottom: 0.5em;
-  font-family: "Lora", serif;
-  font-weight: bold;
-  font-style: italic;
-  letter-spacing: -2px; }
+  font-family: "Merriweather", serif;
+  font-weight: bold; }
   .page-title {
-    font-size: 48px; }
+    font-size: 24px; }
     @media screen and (min-width: 320px) {
       .page-title {
-        font-size: calc(48px + 12 * ((100vw - 320px) / 960)); } }
+        font-size: calc(24px + 24 * ((100vw - 320px) / 960)); } }
     @media screen and (min-width: 1280px) {
       .page-title {
-        font-size: 60px; } }
+        font-size: 48px; } }
 
 .page-image {
   position: relative;
@@ -1308,7 +1306,7 @@ th {
       text-align: center; } }
   .page-sidebar .page-date,
   .page-sidebar .read-time {
-    font-family: "Lora", serif;
+    font-family: "Merriweather", serif;
     font-style: italic;
     white-space: nowrap; }
   @media (min-width: 64em) {
@@ -1409,7 +1407,7 @@ th {
 .page-pagination-title {
   margin: 0;
   padding: 0;
-  font-family: "Lora", serif;
+  font-family: "Merriweather", serif;
   font-size: 0.9em;
   font-style: italic; }
 
@@ -1537,7 +1535,7 @@ th {
 
 .entry-title {
   margin-bottom: 0.5rem;
-  font-family: "Lora", serif;
+  font-family: "Merriweather", serif;
   font-weight: bold;
   font-style: italic;
   letter-spacing: -1px;
@@ -1555,7 +1553,7 @@ th {
 
 .entry-meta .entry-date,
 .entry-meta .read-time {
-  font-family: "Lora", serif;
+  font-family: "Merriweather", serif;
   font-style: italic;
   white-space: nowrap; }
 .entry-meta .read-time + .entry-date::before {
@@ -1673,7 +1671,7 @@ th {
   display: inline-block;
   margin-bottom: 0.25em;
   padding: 0.5em 1em;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Noto Sans SC", sans-serif;
   font-size: 1em;
   font-weight: bold;
   text-align: center;
