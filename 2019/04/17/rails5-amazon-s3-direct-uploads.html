@@ -149,34 +149,33 @@
 <span class="n">config</span><span class="p">.</span><span class="nf">active_storage</span><span class="p">.</span><span class="nf">service</span> <span class="o">=</span> <span class="ss">:amazon</span>
 </code></pre></div>    </div>
   </li>
-  <li>Настроить права CORS</li>
+  <li>Настроить права CORS
+  1) Открываем вкладку с бакетами, выбираем нужный
+  2) Выбрать раздел Permissions, перейти на вкладку CORS configuration
+  3) Вписать туда следующие строки:</li>
 </ol>
 
-<p>1) Открываем вкладку с бакетами, выбираем нужный
-  2) Выбрать раздел Permissions, перейти на вкладку CORS configuration
-  3) Вписать туда следующие строки:
-    <code class="highlighter-rouge">xml
-    &lt;?xml version="1.0" encoding="UTF-8"?&gt;
-    &lt;CORSConfiguration xmlns="http://s3.amazonaws.com/doc/2006-03-01/"&gt;
-    &lt;CORSRule&gt;
-        &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;
-        &lt;AllowedMethod&gt;GET&lt;/AllowedMethod&gt;
-        &lt;MaxAgeSeconds&gt;3000&lt;/MaxAgeSeconds&gt;
-        &lt;AllowedHeader&gt;Authorization&lt;/AllowedHeader&gt;
-    &lt;/CORSRule&gt;
-    &lt;CORSRule&gt;
-        &lt;AllowedOrigin&gt;*&lt;/AllowedOrigin&gt;
-        &lt;AllowedMethod&gt;PUT&lt;/AllowedMethod&gt;
-        &lt;AllowedMethod&gt;POST&lt;/AllowedMethod&gt;
-        &lt;MaxAgeSeconds&gt;3000&lt;/MaxAgeSeconds&gt;
-        &lt;AllowedHeader&gt;*&lt;/AllowedHeader&gt;
-    &lt;/CORSRule&gt;
-    &lt;/CORSConfiguration&gt;
-   </code>
-  4) Когда разработка будет закончена, стоит поменять права на допуск только с нашего сайта, то есть заменить строки AllowedOrigin:
-    <code class="highlighter-rouge">XML
-    &lt;AllowedOrigin&gt;https://*.mysite.com&lt;/AllowedOrigin&gt;
-   </code></p>
+<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;CORSConfiguration</span> <span class="na">xmlns=</span><span class="s">"http://s3.amazonaws.com/doc/2006-03-01/"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;CORSRule&gt;</span>
+    <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
+    <span class="nt">&lt;AllowedMethod&gt;</span>GET<span class="nt">&lt;/AllowedMethod&gt;</span>
+    <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
+    <span class="nt">&lt;AllowedHeader&gt;</span>Authorization<span class="nt">&lt;/AllowedHeader&gt;</span>
+<span class="nt">&lt;/CORSRule&gt;</span>
+<span class="nt">&lt;CORSRule&gt;</span>
+    <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
+    <span class="nt">&lt;AllowedMethod&gt;</span>PUT<span class="nt">&lt;/AllowedMethod&gt;</span>
+    <span class="nt">&lt;AllowedMethod&gt;</span>POST<span class="nt">&lt;/AllowedMethod&gt;</span>
+    <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
+    <span class="nt">&lt;AllowedHeader&gt;</span>*<span class="nt">&lt;/AllowedHeader&gt;</span>
+<span class="nt">&lt;/CORSRule&gt;</span>
+<span class="nt">&lt;/CORSConfiguration&gt;</span>
+</code></pre></div></div>
+<p>4) Когда разработка будет закончена, стоит поменять права на допуск только с нашего сайта, то есть заменить строки AllowedOrigin:</p>
+
+<pre><code class="language-XML">&lt;AllowedOrigin&gt;https://*.mysite.com&lt;/AllowedOrigin&gt;
+</code></pre>
 
 <p>На этом настройка S3 закончена, файлы должны успешно загружаться.</p>
 
@@ -184,9 +183,8 @@
 
 <h3 id="настройка-direct-uploads">Настройка direct uploads</h3>
 
-<p>Действуем по мануалу <a href="http://rusrails.ru/active_storage_overview#pryamye-zagruzki">9. Прямые загрузки</a></p>
-
-<p>А именно:</p>
+<p>Действуем по мануалу <a href="http://rusrails.ru/active_storage_overview#pryamye-zagruzki">Прямые загрузки</a>
+А именно:</p>
 
 <p>9. К полям загрузки в форме добавить аттрибут <code class="highlighter-rouge">direct_upload: true</code></p>
 
@@ -209,6 +207,14 @@
         
 
         <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/z/2019/01/01/books-to-read.html">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> Список книг для почитать
+
+      </span>
+    </a>
   
 
   
