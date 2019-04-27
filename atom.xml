@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://arbaev.github.io/z/atom.xml" rel="self" type="application/atom+xml" /><link href="https://arbaev.github.io/z/" rel="alternate" type="text/html" /><updated>2019-04-27T18:19:55+03:00</updated><id>https://arbaev.github.io/z/</id><title type="html">Everything is anything</title><subtitle>Что угодно я знаю</subtitle><entry><title type="html">Ruby: методы sort и sort_by</title><link href="https://arbaev.github.io/z/2019/04/23/sort_by.html" rel="alternate" type="text/html" title="Ruby: методы sort и sort_by" /><published>2019-04-23T00:00:00+03:00</published><updated>2019-04-23T19:22:00+03:00</updated><id>https://arbaev.github.io/z/2019/04/23/sort_by</id><content type="html" xml:base="https://arbaev.github.io/z/2019/04/23/sort_by.html">&lt;p&gt;В Ruby у класса Enumerable есть методы sort и sort_by. Первый выполняет простую сортировку массива. А вот второй более интересен.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="https://arbaev.github.io/z/atom.xml" rel="self" type="application/atom+xml" /><link href="https://arbaev.github.io/z/" rel="alternate" type="text/html" /><updated>2019-04-27T18:36:23+03:00</updated><id>https://arbaev.github.io/z/</id><title type="html">Everything is anything</title><subtitle>Что угодно я знаю</subtitle><entry><title type="html">Ruby: методы sort и sort_by</title><link href="https://arbaev.github.io/z/2019/04/23/sort_by.html" rel="alternate" type="text/html" title="Ruby: методы sort и sort_by" /><published>2019-04-23T00:00:00+03:00</published><updated>2019-04-23T19:22:00+03:00</updated><id>https://arbaev.github.io/z/2019/04/23/sort_by</id><content type="html" xml:base="https://arbaev.github.io/z/2019/04/23/sort_by.html">&lt;p&gt;В Ruby у класса Enumerable есть методы sort и sort_by. Первый выполняет простую сортировку массива. А вот второй более интересен.
 &lt;code class=&quot;highlighter-rouge&quot;&gt;Sort_by&lt;/code&gt; передаёт в блок элементы один за другим, как это делает &lt;code class=&quot;highlighter-rouge&quot;&gt;map&lt;/code&gt;, например. Но как, имея один объект из множества, отсортировать всё множество? Загадочный метод. В нём используется &lt;a href=&quot;https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%A8%D0%B2%D0%B0%D1%80%D1%86%D0%B0&quot;&gt;преобразование Шварца&lt;/a&gt;. Хитрость в том, что данные сначала проходят через наш блок и результаты вычислений заносится во временный массив попарно. Затем временный массив сортируется и получаем из него исходные данные в нужном порядке.
 Например, имеем массив строк:&lt;/p&gt;
 
@@ -270,12 +270,12 @@
 ##Джо Диспенза “Сила подсознания”&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;мне хотелось меняться, но я не знала как. Пока мне не попала в руки эта книга. Она всегда попадает к своему читателю вовремя.&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><category term="books" /><summary type="html">Книги и рекомендации</summary></entry><entry><title type="html">Шпаргалка по InDesign</title><link href="https://arbaev.github.io/z/2018/08/09/InDesign-cheatsheet.html" rel="alternate" type="text/html" title="Шпаргалка по InDesign" /><published>2018-08-09T00:00:00+03:00</published><updated>2019-04-27T21:03:00+03:00</updated><id>https://arbaev.github.io/z/2018/08/09/InDesign-cheatsheet</id><content type="html" xml:base="https://arbaev.github.io/z/2018/08/09/InDesign-cheatsheet.html">&lt;p&gt;Концепция “объект и кадр”.
-Объект может быть любой формы.&lt;/p&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><category term="books" /><summary type="html">Книги и рекомендации</summary></entry><entry><title type="html">Шпаргалка по InDesign</title><link href="https://arbaev.github.io/z/2018/08/09/InDesign-cheatsheet.html" rel="alternate" type="text/html" title="Шпаргалка по InDesign" /><published>2018-08-09T00:00:00+03:00</published><updated>2019-04-27T21:03:00+03:00</updated><id>https://arbaev.github.io/z/2018/08/09/InDesign-cheatsheet</id><content type="html" xml:base="https://arbaev.github.io/z/2018/08/09/InDesign-cheatsheet.html">&lt;p&gt;Концепция “объект и кадр”.\
+Объект может быть любой формы.\&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-D&lt;/code&gt; - импорт картинок, одной или нескольких. вставка происходит по очереди, смена очереди - стрелки лево-право. Если зажать ctrl, то вставятся сразу все картинки сеткой&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;V&lt;/code&gt; - черная стрелка - двигает объект
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;V&lt;/code&gt; - черная стрелка - двигает объект&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;A&lt;/code&gt; - белая стрелка - двигает кадр&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;A-Master&lt;/code&gt; - общая подложка под все страницы, нижний слой&lt;/p&gt;
@@ -287,19 +287,19 @@
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;w&lt;/code&gt; - быстрый предпросмотр
 &lt;code class=&quot;highlighter-rouge&quot;&gt;shift-w&lt;/code&gt; - полный предпросмотр&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-2 (3)&lt;/code&gt; - приблизить к выбранному объекту, 
-&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-0&lt;/code&gt; - масштаб страницы на экран, 
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-2 (3)&lt;/code&gt; - приблизить к выбранному объекту,&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-0&lt;/code&gt; - масштаб страницы на экран,&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-alt-0&lt;/code&gt; - разворот на экран&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-[&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-]&lt;/code&gt; - слой вверх/вниз&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-e&lt;/code&gt; - пропорционально вписать картинку в объект (обрезка)
-&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-shift-e&lt;/code&gt; - уменьшить картинку по размерам объекта (поля)
-&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-shift-c&lt;/code&gt; - центрировать картинку в объекте
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-e&lt;/code&gt; - пропорционально вписать картинку в объект (обрезка)&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-shift-e&lt;/code&gt; - уменьшить картинку по размерам объекта (поля)&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-shift-c&lt;/code&gt; - центрировать картинку в объекте&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;alt-e&lt;/code&gt; - изменить размер объекта по размеру картинки&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-alt-shift-v&lt;/code&gt; - вставить скопированную картинку в объект&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ctrl-b&lt;/code&gt; — свойства объекта, в том числе паддинги&lt;/p&gt;
 
-&lt;p&gt;Пара из этих шорткатов — нестандартные, кастомизировал сам. &lt;a href=&quot;/files/Tim.indk&quot;&gt;Файл с моими шорткатами&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="indesign" /><summary type="html">Книги и рекомендации</summary></entry></feed>
+&lt;p&gt;Пара из этих шорткатов — нестандартные, кастомизировал сам. &lt;a href=&quot;{{ site.baseurl }}/files/Tim.indk&quot;&gt;Файл с моими шорткатами&lt;/a&gt;&lt;/p&gt;</content><author><name></name></author><category term="indesign" /><summary type="html">Концепция “объект и кадр”.\ Объект может быть любой формы.\ ctrl-D - импорт картинок, одной или нескольких. вставка происходит по очереди, смена очереди - стрелки лево-право. Если зажать ctrl, то вставятся сразу все картинки сеткой V - черная стрелка - двигает объект A - белая стрелка - двигает кадр A-Master - общая подложка под все страницы, нижний слой Library - сохранять свои темплейты, перед этим удалив с них фото Включить в настройках high performance для качественных превьюшек фото. w - быстрый предпросмотр shift-w - полный предпросмотр ctrl-2 (3) - приблизить к выбранному объекту, ctrl-0 - масштаб страницы на экран, ctrl-alt-0 - разворот на экран ctrl-[, ctrl-] - слой вверх/вниз ctrl-e - пропорционально вписать картинку в объект (обрезка) ctrl-shift-e - уменьшить картинку по размерам объекта (поля) ctrl-shift-c - центрировать картинку в объекте alt-e - изменить размер объекта по размеру картинки ctrl-alt-shift-v - вставить скопированную картинку в объект ctrl-b — свойства объекта, в том числе паддинги Пара из этих шорткатов — нестандартные, кастомизировал сам. Файл с моими шорткатами</summary></entry></feed>
