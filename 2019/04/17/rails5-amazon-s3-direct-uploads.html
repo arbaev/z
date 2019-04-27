@@ -31,7 +31,7 @@
 <meta property="twitter:title" content="Rails: Настройка хранилища Amazon S3 и включение direct upload" />
 <meta name="twitter:site" content="@mmistakes" />
 <script type="application/ld+json">
-{"datePublished":"2019-04-17T00:00:00+03:00","description":"Инструкция по настройке Amazon S3 и включения прямой загрузки в рельсовом приложении","dateModified":"2019-04-17T20:27:01+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html"},"@type":"BlogPosting","url":"https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html","headline":"Rails: Настройка хранилища Amazon S3 и включение direct upload","@context":"https://schema.org"}</script>
+{"description":"Инструкция по настройке Amazon S3 и включения прямой загрузки в рельсовом приложении","mainEntityOfPage":{"@type":"WebPage","@id":"https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html"},"@type":"BlogPosting","url":"https://arbaev.github.io/z/2019/04/17/rails5-amazon-s3-direct-uploads.html","headline":"Rails: Настройка хранилища Amazon S3 и включение direct upload","dateModified":"2019-04-17T20:27:01+03:00","datePublished":"2019-04-17T00:00:00+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -149,33 +149,38 @@
 <span class="n">config</span><span class="p">.</span><span class="nf">active_storage</span><span class="p">.</span><span class="nf">service</span> <span class="o">=</span> <span class="ss">:amazon</span>
 </code></pre></div>    </div>
   </li>
-  <li>Настроить права CORS
-  1) Открываем вкладку с бакетами, выбираем нужный
-  2) Выбрать раздел Permissions, перейти на вкладку CORS configuration
-  3) Вписать туда следующие строки:</li>
+  <li>
+    <p>Настроить права CORS
+  1) Открываем вкладку с бакетами, выбираем нужный<br />
+  2) Выбрать раздел Permissions, перейти на вкладку CORS configuration<br />
+  3) Вписать туда следующие строки:</p>
+
+    <div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+ <span class="nt">&lt;CORSConfiguration</span> <span class="na">xmlns=</span><span class="s">"http://s3.amazonaws.com/doc/2006-03-01/"</span><span class="nt">&gt;</span>
+ <span class="nt">&lt;CORSRule&gt;</span>
+     <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
+     <span class="nt">&lt;AllowedMethod&gt;</span>GET<span class="nt">&lt;/AllowedMethod&gt;</span>
+     <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
+     <span class="nt">&lt;AllowedHeader&gt;</span>Authorization<span class="nt">&lt;/AllowedHeader&gt;</span>
+ <span class="nt">&lt;/CORSRule&gt;</span>
+ <span class="nt">&lt;CORSRule&gt;</span>
+     <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
+     <span class="nt">&lt;AllowedMethod&gt;</span>PUT<span class="nt">&lt;/AllowedMethod&gt;</span>
+     <span class="nt">&lt;AllowedMethod&gt;</span>POST<span class="nt">&lt;/AllowedMethod&gt;</span>
+     <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
+     <span class="nt">&lt;AllowedHeader&gt;</span>*<span class="nt">&lt;/AllowedHeader&gt;</span>
+ <span class="nt">&lt;/CORSRule&gt;</span>
+ <span class="nt">&lt;/CORSConfiguration&gt;</span>
+</code></pre></div>    </div>
+  </li>
 </ol>
 
-<div class="language-xml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-<span class="nt">&lt;CORSConfiguration</span> <span class="na">xmlns=</span><span class="s">"http://s3.amazonaws.com/doc/2006-03-01/"</span><span class="nt">&gt;</span>
-<span class="nt">&lt;CORSRule&gt;</span>
-    <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
-    <span class="nt">&lt;AllowedMethod&gt;</span>GET<span class="nt">&lt;/AllowedMethod&gt;</span>
-    <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
-    <span class="nt">&lt;AllowedHeader&gt;</span>Authorization<span class="nt">&lt;/AllowedHeader&gt;</span>
-<span class="nt">&lt;/CORSRule&gt;</span>
-<span class="nt">&lt;CORSRule&gt;</span>
-    <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
-    <span class="nt">&lt;AllowedMethod&gt;</span>PUT<span class="nt">&lt;/AllowedMethod&gt;</span>
-    <span class="nt">&lt;AllowedMethod&gt;</span>POST<span class="nt">&lt;/AllowedMethod&gt;</span>
-    <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
-    <span class="nt">&lt;AllowedHeader&gt;</span>*<span class="nt">&lt;/AllowedHeader&gt;</span>
-<span class="nt">&lt;/CORSRule&gt;</span>
-<span class="nt">&lt;/CORSConfiguration&gt;</span>
-</code></pre></div></div>
 <p>4) Когда разработка будет закончена, стоит поменять права на допуск только с нашего сайта, то есть заменить строки AllowedOrigin:</p>
 
-<pre><code class="language-XML">&lt;AllowedOrigin&gt;https://*.mysite.com&lt;/AllowedOrigin&gt;
-</code></pre>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>```xml
+&lt;AllowedOrigin&gt;https://*.mysite.com&lt;/AllowedOrigin&gt;
+```
+</code></pre></div></div>
 
 <p>На этом настройка S3 закончена, файлы должны успешно загружаться.</p>
 

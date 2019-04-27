@@ -31,7 +31,7 @@
 <meta property="twitter:title" content="Кодинг без ифов" />
 <meta name="twitter:site" content="@mmistakes" />
 <script type="application/ld+json">
-{"datePublished":"2019-04-22T00:00:00+03:00","description":"Простые способы избавления от логики в Руби","dateModified":"2019-04-23T19:22:00+03:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://arbaev.github.io/z/2019/04/22/coding-without-ifs.html"},"@type":"BlogPosting","url":"https://arbaev.github.io/z/2019/04/22/coding-without-ifs.html","headline":"Кодинг без ифов","@context":"https://schema.org"}</script>
+{"description":"Простые способы избавления от логики в Руби","mainEntityOfPage":{"@type":"WebPage","@id":"https://arbaev.github.io/z/2019/04/22/coding-without-ifs.html"},"@type":"BlogPosting","url":"https://arbaev.github.io/z/2019/04/22/coding-without-ifs.html","headline":"Кодинг без ифов","dateModified":"2019-04-23T19:22:00+03:00","datePublished":"2019-04-22T00:00:00+03:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -128,8 +128,7 @@
         <div class="e-content">
           <p><em>Перевод статьи <a href="https://thoughtbot.com/blog/coding-without-ifs">coding without ifs</a></em></p>
 
-<p>То, что усложняет код больше всего на свете - это условная логика
-Условная логика усложняет код больше всего на свете. Все эти <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">else</code>, <code class="highlighter-rouge">unless</code>, как вложенные, так и не вложенные. Я всегда стараюсь избавиться от них где можно, потому что код без них легче читается и имеет лучший ритм. Сравните это:</p>
+<p>То, что усложняет код больше всего на свете - это условная логика. Она усложняет код больше всего на свете. Все эти <code class="highlighter-rouge">if</code>, <code class="highlighter-rouge">else</code>, <code class="highlighter-rouge">unless</code>, как вложенные, так и не вложенные. Я всегда стараюсь избавиться от них где можно, потому что код без них легче читается и имеет лучший ритм. Сравните это:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update_subscriptions</span>
   <span class="no">Subscription</span><span class="p">.</span><span class="nf">find</span><span class="p">(</span><span class="ss">:all</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">each</span><span class="o">|</span>
@@ -152,7 +151,8 @@
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>В приведенном выше коде об условной логике позаботились исчисляемые методы <code class="highlighter-rouge">#select</code> и <code class="highlighter-rouge">#reject</code>. Получается, мы переместили условную логику внутрь Ruby из нашего кода. Посмотрите, как во втором примере код просто спокойно течет вверх и вниз, без всяких отступов и ответвлений, его очень легко читать. Даже не программисты выбрали бы второй пример как более простой и элегантный. Еще пример. Скажем, фильтры контроллера в Rails работали так:</p>
+<p>В приведенном выше коде об условной логике позаботились исчисляемые методы <code class="highlighter-rouge">#select</code> и <code class="highlighter-rouge">#reject</code>. Получается, мы переместили условную логику внутрь Ркби из нашего кода. Посмотрите, как во втором примере код просто спокойно течет вверх и вниз, без всяких отступов и ответвлений, его очень легко читать. Даже не программисты выбрали бы второй пример как более простой и элегантный.<br />
+Еще пример. Скажем, фильтры контроллера в Rails работали так:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EventsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
   <span class="k">def</span> <span class="nf">new</span>
@@ -190,7 +190,7 @@
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>В методе <code class="highlighter-rouge">#filter</code> нужно условие, потому что мы хотим, чтобы юзер был залогинен для экшенов <code class="highlighter-rouge">#new</code> и <code class="highlighter-rouge">#create</code>. Однако, Рельсовые методы фильтра поддерживают только ключ-параметр. Значит можно переписать это дело используя метод класса <code class="highlighter-rouge">#before_action</code>:</p>
+<p>В методе <code class="highlighter-rouge">#filter</code> нужно условие, потому что мы хотим, чтобы юзер был залогинен для экшенов <code class="highlighter-rouge">#new</code> и <code class="highlighter-rouge">#create</code>. Однако, рельсовые методы фильтра поддерживают только ключ-параметр. Значит, можно переписать это дело используя метод класса <code class="highlighter-rouge">#before_action</code>:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">EventsController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
 
@@ -265,7 +265,7 @@
 
 <span class="k">end</span>
 </code></pre></div></div>
-<p>Опять убогие условия. Я хочу отдать разбираться с этим Рельсам используя метод класса <code class="highlighter-rouge">#before_create</code> вместо переопределения инстанс метода.</p>
+<p>Опять убогие условия. Я хочу отдать разбираться с ними Рельсам, используя метод класса <code class="highlighter-rouge">#before_create</code> вместо переопределения инстанс метода.</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Publication</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
 
@@ -294,7 +294,7 @@
   <span class="k">end</span>
 <span class="k">end</span>
 </code></pre></div></div>
-<p>Но так мне не нравится, потому что код выглядит будто в нём нет условной логики, а она есть. Просто операторы if и unless скрылись в конце строк. Если уж логики не избежать, её должно быть хорошо видно. Хорошее напоминание, что в этом месте можно кое-что отрефакторить.</p>
+<p>Но так мне не нравится, потому что код выглядит будто в нём нет условной логики, а она есть. Просто операторы if и unless скрылись в конце строк. Если уж логики не избежать, её должно быть хорошо видно. Пусть останется напоминание, что в этом месте можно кое-что отрефакторить.</p>
 
 <p>Тоже самое делает старый добрый тернарный оператор:</p>
 
