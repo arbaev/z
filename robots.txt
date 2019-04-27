@@ -1,1 +1,1 @@
-Sitemap: /sitemap.xml
+Sitemap: https://arbaev.github.io/z/sitemap.xml
