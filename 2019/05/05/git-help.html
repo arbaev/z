@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--
+    So Simple Jekyll Theme 3.1.2
+    Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+    Free for personal and commercial use under the MIT license
+    https://github.com/mmistakes/so-simple-theme/blob/master/LICENSE
+-->
+<html lang="en-US" class="no-js">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  
+
+  
+    
+    <!-- Begin Jekyll SEO tag v2.6.0 -->
+<title>Шпаргалка по Git | Anything is Z</title>
+<meta name="generator" content="Jekyll v3.8.5" />
+<meta property="og:title" content="Шпаргалка по Git" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Жизненные ситуации с гитом" />
+<meta property="og:description" content="Жизненные ситуации с гитом" />
+<link rel="canonical" href="https://arbaev.github.io/z/2019/05/05/git-help.html" />
+<meta property="og:url" content="https://arbaev.github.io/z/2019/05/05/git-help.html" />
+<meta property="og:site_name" content="Anything is Z" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-05-05T00:00:00+03:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Шпаргалка по Git" />
+<meta name="twitter:site" content="@mmistakes" />
+<script type="application/ld+json">
+{"description":"Жизненные ситуации с гитом","mainEntityOfPage":{"@type":"WebPage","@id":"https://arbaev.github.io/z/2019/05/05/git-help.html"},"@type":"BlogPosting","url":"https://arbaev.github.io/z/2019/05/05/git-help.html","headline":"Шпаргалка по Git","dateModified":"2019-05-05T14:22:00+03:00","datePublished":"2019-05-05T00:00:00+03:00","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+  
+
+  <script>
+    /* Cut the mustard */
+    if ( 'querySelector' in document && 'addEventListener' in window ) {
+      document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + 'js';
+    }
+  </script>
+
+  <link rel="stylesheet" href="/z/assets/css/main.css">
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+SC:400,700|Merriweather:900">
+  <link rel="alternate" type="application/atom+xml" title="Anything is Z" href="/z/atom.xml">
+<!-- start custom head snippets -->
+
+<!-- insert favicons. use http://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+</head>
+
+
+  <body class="layout--post  шпаргалка-по-git">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#primary-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+  <div class="navigation-wrapper">
+    <a href="#menu-toggle" id="menu-toggle">Menu</a>
+    <nav id="primary-nav" class="site-nav animated drop">
+      <ul><li><a href="/z/">Home</a></li><li><a href="/z/posts/">Posts</a></li><li><a href="/z/categories/">Categories</a></li><li><a href="/z/tags/">Tags</a></li><li><a href="/z/about/">About</a></li><li><a href="/z/search/">Search</a></li></ul>
+    </nav>
+  </div><!-- /.navigation-wrapper -->
+
+
+    <header class="masthead">
+  <div class="wrap">
+    
+    
+    
+      
+        <div class="site-title animated fadeIn"><a href="/z/">Anything is Z</a></div>
+      
+      <p class="site-description animated fadeIn" itemprop="description">Что угодно я знаю</p>
+    
+  </div>
+</header><!-- /.masthead -->
+
+
+    <main id="main" class="main-content" aria-label="Content">
+  <article class="h-entry">
+    
+
+    <div class="page-wrapper">
+      <header class="page-header">
+        
+        
+          <h1 id="page-title" class="page-title p-name">Шпаргалка по Git
+</h1>
+        
+      </header>
+
+      <div class="page-sidebar">
+        <div class="page-author h-card p-author"><div class="author-info">
+
+<span class="read-time">~1 min read</span>
+
+    <time class="page-date dt-published" datetime="2019-05-05T00:00:00+03:00"><a class="u-url" href="">May 5, 2019</a>
+</time>
+
+  </div>
+</div>
+
+        
+
+        
+  <h3 class="page-taxonomies-title">Tags</h3>
+  <ul class="page-taxonomies"><li class="page-taxonomy"><a href="/z/tags/#git" title="Pages tagged git" rel="tag">git</a></li>
+  </ul>
+
+
+      </div>
+
+      <div class="page-content">
+        <div class="e-content">
+          <h2 id="изменение-названия-коммита">Изменение названия коммита</h2>
+
+<p>Чтобы изменить имя последнего коммита, достаточно ввести:</p>
+
+<p><code class="highlighter-rouge">git commit --amend -m "Новое название коммита"</code></p>
+
+<p>Для изменения имени других коммитов, нужно сделать:</p>
+
+<p><code class="highlighter-rouge">git commit --amend -c &lt;commit ID&gt;</code></p>
+
+<p>и отредактировать имя коммита через редактор.</p>
+
+<h2 id="git-workflow">Git workflow</h2>
+
+<p>Привести свою ветку в актуальное состояние (чтобы ее могли слить в master без конфликтов):</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git checkout master
+git pull origin master //обновляем свой локальный master
+git checkout &lt;имя-ветки&gt;
+git merge master  //сливаем master в свою ветку
+... если есть конфлиты, решаем их
+... и заканчиваем слияние git commit
+git push origin &lt;имя-ветки&gt;  //выкладываем свою ветку в общий репозиторий
+... дальше вашу ветку без конфликтов могут слить в master
+</code></pre></div></div>
+
+<p>Если кроме вас никто в ветке не работает то вместо merge можно делать rebase, тогда не будет лишнего коммита при слиянии. И последние две команды будут такие:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git rebase master  //подтянуть ветку к обновленному master
+git push -f origin &lt;имя-ветки&gt;  //принудительно обновить серверную ветку так как изменились коммиты после rebase
+</code></pre></div></div>
+
+        </div>
+
+        
+          <div class="page-share">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Farbaev.github.io%2Fz%2F2019%2F05%2F05%2Fgit-help.html" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--facebook btn--small"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i> <span>Share</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%D0%A8%D0%BF%D0%B0%D1%80%D0%B3%D0%B0%D0%BB%D0%BA%D0%B0+%D0%BF%D0%BE+Git%20https%3A%2F%2Farbaev.github.io%2Fz%2F2019%2F05%2F05%2Fgit-help.html" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--twitter btn--small"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i> <span>Tweet</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Farbaev.github.io%2Fz%2F2019%2F05%2F05%2Fgit-help.html" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--linkedin btn--small"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i> <span>LinkedIn</span></a>
+  <a href="https://reddit.com/submit?title=%D0%A8%D0%BF%D0%B0%D1%80%D0%B3%D0%B0%D0%BB%D0%BA%D0%B0+%D0%BF%D0%BE+Git&url=https%3A%2F%2Farbaev.github.io%2Fz%2F2019%2F05%2F05%2Fgit-help.html" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" class="btn btn--reddit btn--small"><i class="fab fa-fw fa-reddit" aria-hidden="true"></i> <span>Reddit</span></a>
+</div>
+
+        
+
+        
+
+        <nav class="page-pagination" role="navigation">
+  
+    <a class="page-previous" href="/z/2019/05/01/project-ideas.html">
+      <h4 class="page-pagination-label">Previous</h4>
+      <span class="page-pagination-title">
+        <i class="fas fa-arrow-left"></i> Идеи проектов
+
+      </span>
+    </a>
+  
+
+  
+    <a class="page-next" href="/z/2019/05/06/best-tracks-ever.html">
+      <h4 class="page-pagination-label">Next</h4>
+      <span class="page-pagination-title">
+        Самые любимые треки
+ <i class="fas fa-arrow-right"></i>
+      </span>
+    </a>
+  
+</nav>
+
+      </div>
+    </div>
+  </article>
+</main>
+
+
+    <footer id="footer" class="site-footer">
+  <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+<div class="copyright">
+    
+      <p>&copy; 2019 Anything is Z. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://github.com/mmistakes/so-simple-theme" rel="nofollow">So Simple</a>.</p>
+    
+  </div>
+</footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="/z/assets/js/main.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script>
+
+
+<!-- MathJax -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  </body>
+
+</html>
